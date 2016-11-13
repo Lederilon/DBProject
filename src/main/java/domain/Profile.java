@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.LinkedList;
 
 /**
- * Created by kosty on 11/7/2016.
+ * @author KostyaHrishenko
  */
 public class Profile {
 
@@ -49,21 +49,46 @@ public class Profile {
         this.sex = sex;
     }
 
-    enum Sex{M,F};
+    public int getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public enum Sex{
+        M("M"),F("F");
+        private String name;
+        Sex(String  name) {
+        this. name = name;
+        }
+
+        public String getName() {
+            return  name;
+        }
+    };
+    private final int id;
     private String login;
     private String password;
     private Date registrationTime;
     private String name;
     private Sex sex;
     private ProfileCategory category;
-    public Profile(String login, String password, Date registrationTime, String name, Sex sex, String eMail,ProfileCategory category) {
+    private String email;
+    public Profile(int id,String login, String password, Date registrationTime, String name, Sex sex, String eMail,ProfileCategory category) {
         this.login = login;
         this.password = password;
         this.registrationTime = registrationTime;
         this.name = name;
         this.sex = sex;
-        String eMail1 = eMail;
+        this.email = eMail;
         this.category = category;
+        this.id = id;
     }
     public ProfileCategory getCategory() {
         return category;

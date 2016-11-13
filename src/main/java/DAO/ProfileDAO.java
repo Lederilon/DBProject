@@ -1,8 +1,56 @@
 package DAO;
 
+import domain.Profile;
+import domain.ProfileCategory;
+
+import java.sql.SQLException;
+import java.util.Date;
+import java.util.List;
+
 /**
- * Created by I on 13.11.2016.
+ * @author KostyaHrishenko
  */
 public interface ProfileDAO {
-    public
+    /**
+     *
+     * @param login
+     * @param password
+     * @param registrationTime
+     * @param name
+     * @param sex
+     * @param eMail
+     * @param category
+     * @return
+     */
+    public Profile createProfile(String login, String password, Date registrationTime, String name, Profile.Sex sex, String eMail, ProfileCategory category) throws SQLException;
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+
+    public Profile getById(int id);
+
+    /**
+     *
+     * @param id
+     */
+    public void deleteById(int id);
+
+    /**
+     *
+     * @param profile
+     */
+    public void updateProfile(Profile profile);
+
+    /**
+     *
+     * @return
+     */
+    public List<Profile> getAll();
+
+
+
+
 }

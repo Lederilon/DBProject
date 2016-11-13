@@ -4,9 +4,16 @@ package domain;
  * Created by kosty on 11/7/2016.
  */
 public class ProfileCategory {
-    public ProfileCategory(CategoryNames name) {
+    private final int id;
+    public ProfileCategory(int id, CategoryNames name) {
+        this.id = id;
         this.name = name;
     }
+
+    public int getId() {
+        return id;
+    }
+
     enum  CategoryNames{
         F("Catering facilities"),
         D("Delivery Service"),

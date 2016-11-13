@@ -11,5 +11,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Downloads/mysql-connector-java-5.1.40.zip!/mysql-connector-java-5.1.40/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.9" level="project" />
   </component>
 </module>
