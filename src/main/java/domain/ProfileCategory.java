@@ -14,7 +14,7 @@ public class ProfileCategory {
         return id;
     }
 
-    enum  CategoryNames{
+    public enum  CategoryNames{
         F("Catering facilities"),
         D("Delivery Service"),
         C("Consumer");

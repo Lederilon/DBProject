@@ -1,5 +1,6 @@
 package DAO;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -12,6 +13,10 @@ public class DAOFactoryMySQL implements DAOFactory {
         this.connectionString = connectionString;
     }
     public ProfileDAO getProfileDAO() throws SQLException {       ;
-        return new ProfileDAOMySQL(DriverManager.getConnection(connectionString));
+        return new ProfileDAOMySQL(this);
+    }
+
+    public Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(connectionString);
     }
 }

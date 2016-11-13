@@ -30,7 +30,7 @@ public interface ProfileDAO {
      * @return
      */
 
-    public Profile getById(int id);
+    public Profile getById(int id) throws SQLException;
 
     /**
      *

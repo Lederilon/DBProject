@@ -18,5 +18,8 @@ public class Main {
         "user=root&password=FICTIO53");
         ProfileDAO  profileDAO = factory.getProfileDAO();
         profileDAO.createProfile("dasd","asdad",new Date(),"asda", Profile.Sex.M,"@dasd",new ProfileCategory(1,ProfileCategory.CategoryNames.D)) ;
+        Profile profile = profileDAO.getById(6);
+        System.out.print(profile);
+
     }
 }

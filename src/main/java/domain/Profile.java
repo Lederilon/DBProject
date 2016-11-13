@@ -96,5 +96,9 @@ public class Profile {
     public void setCategory(ProfileCategory category) {
         this.category = category;
     }
+    @Override
+    public String toString(){
+      return id+ " "+login+" "+password+" "+registrationTime+" "+name+" "+sex+" "+email+" "+category;
+    }
 
 }
