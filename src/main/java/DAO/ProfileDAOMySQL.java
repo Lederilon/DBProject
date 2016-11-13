@@ -26,7 +26,7 @@ public class ProfileDAOMySQL implements ProfileDAO{
      * @param sex
      * @param eMail
      * @param category
-     * @return
+     * @return Profile
      */
     public Profile createProfile(String login, String password, Date registrationTime, String name, Profile.Sex sex, String eMail, ProfileCategory category) throws SQLException {
         Connection connection = connectionSource.getConnection();
@@ -55,6 +55,12 @@ public class ProfileDAOMySQL implements ProfileDAO{
        }
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     * @throws SQLException
+     */
     public Profile getById(int id) throws SQLException {
         Connection connection = connectionSource.getConnection();
         try{
@@ -88,6 +94,11 @@ public class ProfileDAOMySQL implements ProfileDAO{
 
     }
 
+    /**
+     *
+     * @param id
+     * @throws SQLException
+     */
     public void deleteById(int id) throws SQLException {
         Connection connection = connectionSource.getConnection();
         try{
@@ -99,9 +110,19 @@ public class ProfileDAOMySQL implements ProfileDAO{
             connection.close();}
     }
 
+    /**
+     *
+     * @param profile
+     */
     public void updateProfile(Profile profile) {
 
     }
+
+    /**
+     *
+     * @return
+     * @throws SQLException
+     */
 
     public List<Profile> getAll() throws SQLException {
         Connection connection = connectionSource.getConnection();
@@ -126,7 +147,7 @@ public class ProfileDAOMySQL implements ProfileDAO{
                 creationDate = rs.getDate(6);
                 sex = Profile.Sex.valueOf(rs.getString(7));
                 //!!!!!!!Change after adding categoryDAO
-                category = new ProfileCategory(rs.getInt(8),ProfileCategory.CategoryNames.C);
+                 category = new ProfileCategory(rs.getInt(8),ProfileCategory.CategoryNames.C);
                 Profile profile =  new Profile(id,login,password,creationDate,name,sex,eMail,category);
                 profiles.add(profile);
             }

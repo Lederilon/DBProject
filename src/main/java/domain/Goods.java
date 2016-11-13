@@ -1,26 +1,44 @@
 package domain;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
- * Created by kosty on 11/7/2016.
+ * @author KostyaHrishenko
  */
-public class Goods {
+public class Goods implements Serializable{
     private String name;
     private LinkedList<Specification> specification;
 
+    /**
+     *
+     * @param name - goods name
+     */
     public Goods(String name) {
         this.name = name;
         specification = new LinkedList<Specification>();
     }
 
+    /**
+     *
+      * @return String - goods name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @param name - characteristic name
+     */
     public void setName(String name) {
         this.name = name;
     }
+
+    /**
+     *
+     * @param spec - goods specification
+     */
     public void addSpecification(Specification spec){
         specification.add(spec);
     }

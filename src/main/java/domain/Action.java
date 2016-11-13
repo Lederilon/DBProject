@@ -3,17 +3,30 @@ package domain;
 import java.util.Date;
 
 /**
- * Created by kosty on 11/7/2016.
+ *Contains information about  action produced on offer
+ *@author KostyaHrishenko
+ *
  */
 public class Action {
+    private final int id;
     private Date actionDate;
     private Order actionTarget;
     private ActionType type;
-    private OfferState state;
+    private OrderState state;
     private Profile actor;
 
 
-    public Action(Date actionDate, Order actionTarget, ActionType type, OfferState state, Profile actor) {
+    /**
+     * Create Action
+     * @param id
+     * @param actionDate - when action produced
+     * @param actionTarget - on what offer  action produced
+     * @param type - what type of action produced
+     * @param state - what state of order it produced
+     * @param actor - profile that create action
+     */
+    public Action(int id, Date actionDate, Order actionTarget, ActionType type, OrderState state, Profile actor) {
+        this.id = id;
         this.actionDate = actionDate;
         this.actionTarget = actionTarget;
         this.type = type;
@@ -25,13 +38,27 @@ public class Action {
         return actionDate;
     }
 
+    /**
+     * Change action creation date
+     * @param actionDate -
+     */
+
     public void setActionDate(Date actionDate) {
         this.actionDate = actionDate;
     }
 
+    /**
+     *
+     * @return actionTarget - on what offer action was prodused
+     */
     public Order getActionTarget() {
         return actionTarget;
     }
+
+    /**
+     *
+     * @param actionTarget
+     */
 
     public void setActionTarget(Order actionTarget) {
         this.actionTarget = actionTarget;
@@ -45,11 +72,11 @@ public class Action {
         this.type = type;
     }
 
-    public OfferState getState() {
+    public OrderState getState() {
         return state;
     }
 
-    public void setState(OfferState state) {
+    public void setState(OrderState state) {
         this.state = state;
     }
 
@@ -59,5 +86,9 @@ public class Action {
 
     public void setActor(Profile actor) {
         this.actor = actor;
+    }
+
+    public int getId() {
+        return id;
     }
 }
