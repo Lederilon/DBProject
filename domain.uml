@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>domain</OriginalElement>
+  <nodes>
+    <node x="-93.0" y="79.0">domain.Offer</node>
+    <node x="-226.0" y="-76.0">domain.Main</node>
+    <node x="204.0" y="225.0">domain.Order</node>
+    <node x="-280.0" y="345.0">domain.Characteristic</node>
+    <node x="-94.0" y="233.0">domain.Goods</node>
+    <node x="60.0" y="226.0">domain.Position</node>
+    <node x="-96.0" y="-7.0">domain.Profile</node>
+    <node x="-298.0" y="223.0">domain.ValueSpecification</node>
+    <node x="-374.0" y="-6.0">domain.ProfileCategory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="domain.Order" target="domain.Position">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Profile" target="domain.Offer">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Goods" target="domain.ValueSpecification">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Offer" target="domain.Goods">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Position" target="domain.Goods">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.ValueSpecification" target="domain.Characteristic">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Main" target="domain.Profile">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Main" target="domain.ProfileCategory">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Profile" target="domain.ProfileCategory">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="133.5" y="188.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

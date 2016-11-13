@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>domain</OriginalElement>
+  <nodes>
+    <node x="-139.9999999999999" y="529.0">domain.Offer</node>
+    <node x="1319.9999999999998" y="166.00000000000023">domain.FeedbackType</node>
+    <node x="-425.9999999999998" y="1187.9999999999995">domain.Characteristic</node>
+    <node x="-382.9999999999998" y="892.0">domain.Specification</node>
+    <node x="-79.99999999999977" y="900.0000000000001">domain.Goods</node>
+    <node x="825.9999999999999" y="439.0">domain.Action</node>
+    <node x="-197.9999999999998" y="194.00000000000023">domain.Main</node>
+    <node x="862.0" y="859.9999999999997">domain.Order</node>
+    <node x="1361.9999999999995" y="562.0">domain.ActionType</node>
+    <node x="1367.9999999999995" y="683.9999999999999">domain.OfferState</node>
+    <node x="188.0" y="10.000000000000028">domain.Profile</node>
+    <node x="286.9999999999999" y="890.0000000000001">domain.Position</node>
+    <node x="803.0" y="44.0">domain.Feedback</node>
+    <node x="-205.99999999999977" y="338.0000000000002">domain.ProfileCategory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="domain.Order" target="domain.Position">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Offer" target="domain.Goods">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Specification" target="domain.Characteristic">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Action" target="domain.OfferState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Position" target="domain.Goods">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Main" target="domain.Profile">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Goods" target="domain.Specification">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Action" target="domain.Profile">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Main" target="domain.ProfileCategory">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Action" target="domain.Order">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Feedback" target="domain.Profile">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Feedback" target="domain.FeedbackType">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Offer" target="domain.Profile">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Action" target="domain.ActionType">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Profile" target="domain.ProfileCategory">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="622.9999999999998" y="596.9999999999999" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

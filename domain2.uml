@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>domain</OriginalElement>
+  <nodes>
+    <node x="170.7500000000001" y="1512.9999999999998">domain.Offer</node>
+    <node x="-218.9999999999999" y="1021.0000000000002">domain.Main</node>
+    <node x="497.75" y="2109.0">domain.Order</node>
+    <node x="-85.99999999999977" y="2058.0">domain.Characteristic</node>
+    <node x="200.0000000000001" y="1807.9999999999995">domain.Goods</node>
+    <node x="552.75" y="1794.0">domain.Position</node>
+    <node x="53.75" y="962.0">domain.Profile</node>
+    <node x="-50.49999999999977" y="1799.0">domain.ValueSpecification</node>
+    <node x="-231.99999999999997" y="1171.5">domain.ProfileCategory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="domain.Order" target="domain.Position">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Profile" target="domain.Offer">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Goods" target="domain.ValueSpecification">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Offer" target="domain.Goods">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Position" target="domain.Goods">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.ValueSpecification" target="domain.Characteristic">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Main" target="domain.Profile">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Main" target="domain.ProfileCategory">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="domain.Profile" target="domain.ProfileCategory">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="730.9999999999998" y="1842.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
