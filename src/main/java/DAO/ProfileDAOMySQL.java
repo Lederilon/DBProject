@@ -30,13 +30,14 @@ public class ProfileDAOMySQL implements ProfileDAO{
     public Profile createProfile(String login, String password, Date registrationTime, String name, Profile.Sex sex, String eMail, ProfileCategory category) throws SQLException {
        try {
           int id;
-          PreparedStatement statement= connection.prepareStatement("INSERT INTO profiles VALUES(?,?,?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
-          statement.setString(1,login);
-          statement.setString(2,password);
-          statement.setDate(3,new java.sql.Date(registrationTime.getTime()));
-          statement.setString(4,name);
-          statement.setString(5,sex.getName());
-          statement.setString(6,eMail);
+          PreparedStatement statement =
+                  connection.prepareStatement("INSERT INTO profiles(name,login,password,email,registertime,sex,profilecategories_id) VALUES(?,?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+          statement.setString(2,login);
+          statement.setString(3,password);
+          statement.setDate(5,new java.sql.Date(registrationTime.getTime()));
+          statement.setString(1,name);
+          statement.setString(6,sex.getName());
+          statement.setString(4,eMail);
           statement.setInt(7,category.getId());
           statement.executeUpdate();
           ResultSet rs =  statement.getGeneratedKeys();
@@ -50,9 +51,6 @@ public class ProfileDAOMySQL implements ProfileDAO{
        finally {
            connection.close();
        }
-
-
-
     }
 
     public Profile getById(int id) {

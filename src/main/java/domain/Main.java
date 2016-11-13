@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) throws SQLException {
         DAOFactory factory = new DAOFactoryMySQL("jdbc:mysql://localhost:3306/payeatpray?" +
         "user=root&password=FICTIO53");
-        ProfileDAO  profileDAO= factory.getProfileDAO();
-
+        ProfileDAO  profileDAO = factory.getProfileDAO();
+        profileDAO.createProfile("dasd","asdad",new Date(),"asda", Profile.Sex.M,"@dasd",new ProfileCategory(1,ProfileCategory.CategoryNames.D)) ;
     }
 }
