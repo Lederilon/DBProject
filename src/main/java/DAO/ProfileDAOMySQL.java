@@ -5,7 +5,9 @@ import domain.ProfileCategory;
 
 import java.sql.*;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @author KostyaHrishenko
@@ -73,6 +75,7 @@ public class ProfileDAOMySQL implements ProfileDAO{
                 eMail = rs.getString(5);
                 creationDate = rs.getDate(6);
                 sex = Profile.Sex.valueOf(rs.getString(7));
+                //!!!!!!!Change after adding categoryDAO
                 category = new ProfileCategory(rs.getInt(8),ProfileCategory.CategoryNames.C);
                 return new Profile(id,login,password,creationDate,name,sex,eMail,category);
             }
@@ -85,15 +88,52 @@ public class ProfileDAOMySQL implements ProfileDAO{
 
     }
 
-    public void deleteById(int id) {
-
+    public void deleteById(int id) throws SQLException {
+        Connection connection = connectionSource.getConnection();
+        try{
+           PreparedStatement statement = connection.prepareStatement("DELETE FROM profiles WHERE id = ?;");
+           statement.setInt(1,id);
+           statement.executeUpdate();
+        }
+        finally{
+            connection.close();}
     }
 
     public void updateProfile(Profile profile) {
 
     }
 
-    public List<Profile> getAll() {
-        return null;
+    public List<Profile> getAll() throws SQLException {
+        Connection connection = connectionSource.getConnection();
+        List<Profile> profiles = new LinkedList<Profile>();
+        try{
+            int id;
+            String name;
+            String login;
+            String password;
+            String eMail;
+            Profile.Sex sex;
+            ProfileCategory category;
+            Date creationDate;
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery("SELECT * FROM profiles");
+             while(rs.next()){
+                id = rs.getInt(1);
+                name = rs.getString(2);
+                login = rs.getString(3);
+                password = rs.getString(4);
+                eMail = rs.getString(5);
+                creationDate = rs.getDate(6);
+                sex = Profile.Sex.valueOf(rs.getString(7));
+                //!!!!!!!Change after adding categoryDAO
+                category = new ProfileCategory(rs.getInt(8),ProfileCategory.CategoryNames.C);
+                Profile profile =  new Profile(id,login,password,creationDate,name,sex,eMail,category);
+                profiles.add(profile);
+            }
+          return profiles;
+        }
+        finally{
+            connection.close();
+        }
     }
 }

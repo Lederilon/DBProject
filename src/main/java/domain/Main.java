@@ -8,6 +8,7 @@ import java.sql.Driver;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by kosty on 11/7/2016.
@@ -17,9 +18,13 @@ public class Main {
         DAOFactory factory = new DAOFactoryMySQL("jdbc:mysql://localhost:3306/payeatpray?" +
         "user=root&password=FICTIO53");
         ProfileDAO  profileDAO = factory.getProfileDAO();
-        profileDAO.createProfile("dasd","asdad",new Date(),"asda", Profile.Sex.M,"@dasd",new ProfileCategory(1,ProfileCategory.CategoryNames.D)) ;
-        Profile profile = profileDAO.getById(6);
-        System.out.print(profile);
-
+      //  profileDAO.createProfile("dasd","asdad",new Date(),"asda", Profile.Sex.M,"@dasd",new ProfileCategory(1,ProfileCategory.CategoryNames.D)) ;
+        Profile profile1 = profileDAO.getById(6);
+        List<Profile> profiles = profileDAO.getAll();
+        profileDAO.deleteById(7);
+     //   System.out.println(profile1);
+        for(Profile profile : profiles){
+            System.out.println(profile);
+        }
     }
 }

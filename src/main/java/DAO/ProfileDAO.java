@@ -36,7 +36,7 @@ public interface ProfileDAO {
      *
      * @param id
      */
-    public void deleteById(int id);
+    public void deleteById(int id) throws SQLException;
 
     /**
      *
@@ -48,7 +48,7 @@ public interface ProfileDAO {
      *
      * @return
      */
-    public List<Profile> getAll();
+    public List<Profile> getAll() throws SQLException;
 
 
 

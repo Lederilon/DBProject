@@ -30,5 +30,8 @@ public class ProfileCategory {
 
     };
     private CategoryNames name;
+    public String toString(){
+        return id + " " +name.getName();
+}
 
 }
