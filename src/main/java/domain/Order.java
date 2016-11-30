@@ -30,22 +30,42 @@ public class Order {
         return positions;
     }
 
+    /**
+     *
+     * @param positions - list with the order positions
+     */
     public void setPositions(List<Position> positions) {
         this.positions = positions;
     }
 
+    /**
+     *
+     * @return - date when Order was created
+     */
     public Date getCreatingDate() {
         return creatingDate;
     }
 
+    /**
+     * Chang date when Order was created
+     * @param creatingDate  -
+     */
     public void setCreatingDate(Date creatingDate) {
         this.creatingDate = creatingDate;
     }
 
+    /**
+     *
+     * @return date when Order should be delivered
+     */
     public Date getDeliveryDate() {
         return deliveryDate;
     }
 
+    /**
+     * Change the date when Order should be delivere
+     * @param deliveryDate
+     */
     public void setDeliveryDate(Date deliveryDate) {
         this.deliveryDate = deliveryDate;
     }

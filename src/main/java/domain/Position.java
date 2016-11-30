@@ -14,7 +14,7 @@ public class Position {
 
     /**
      *
-     * @return goods ip position
+     * @return goods id position
      */
     public Goods getGoods() {
         return goods;

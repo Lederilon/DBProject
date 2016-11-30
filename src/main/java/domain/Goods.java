@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
+ * Contains information about goods
  * @author KostyaHrishenko
  */
 public class Goods implements Serializable{
@@ -11,7 +12,7 @@ public class Goods implements Serializable{
     private LinkedList<Specification> specification;
 
     /**
-     *
+     *Create new goods with guven name
      * @param name - goods name
      */
     public Goods(String name) {
@@ -21,7 +22,7 @@ public class Goods implements Serializable{
 
     /**
      *
-      * @return String - goods name
+     * @return String - goods name
      */
     public String getName() {
         return name;

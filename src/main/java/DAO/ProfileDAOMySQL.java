@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Stack;
 
 /**
+ * ProfileDAO implementation for MySQL
  * @author KostyaHrishenko
  */
 public class ProfileDAOMySQL implements ProfileDAO{

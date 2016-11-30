@@ -3,6 +3,7 @@ package domain;
 import java.util.Date;
 
 /**
+ * Conatins information about an Offer
  * @author Kostya Hrishenko
  */
 public class Offer {
@@ -22,6 +23,7 @@ public class Offer {
      */
     public Offer(int price, int id, Date creationDate, Goods goods, Profile creator) {
         this.price = price;
+
         this.id = id;
         this.creationDate = creationDate;
         this.goods = goods;
@@ -92,6 +94,9 @@ public class Offer {
         this.creator = creator;
     }
 
+    /**
+     * @return OfferId
+     */
     public int getId() {
         return id;
     }

@@ -1,13 +1,13 @@
 package domain;
 
 /**
+ * Describe goods characteristic
  * @author KostyaHrishenko
  */
 public class Characteristic {
     private String name;
     private String comment;
     private String mesurementUnits;
-
     /**
      * Construct characteristic
      * @param name - characteristic name
@@ -22,7 +22,7 @@ public class Characteristic {
 
     /**
      *
-     * @return String -
+     * @return String - what we use to  describe characteristic
      */
     public String getMesurementUnits() {
         return mesurementUnits;
